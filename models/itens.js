@@ -1,7 +1,7 @@
 const conexao = require('../infraestrutura/conexao')
 
 class Item {
-    adiciona(Item) {
+    adiciona(item) {
         const sql = 'INSERT INTO Itens SET ?'
 
         conexao.query(sql, item, (erro, resultado) => {
