@@ -1,15 +1,15 @@
 class Tabelas {
-    init (conexao) {
+    init(conexao) {
         this.conexao = conexao
 
         this.criarItens()
     }
 
     criarItens() {
-        const sql = 'CREATE TABLE IF NOT EXISTS Itens (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, descricao varchar(20), dataentrada varchar(20) NOT NULL, status varchar(20) NOT NULL, observacoes text, PRIMARY KEY(id))'
+        const sql = 'CREATE TABLE IF NOT EXISTS Patrim (id int NOT NULL AUTO_INCREMENT, patrimonio varchar(50) NOT NULL, tipo varchar(20), dataentrada varchar(20), status varchar(20), observacoes text, PRIMARY KEY(id))'
 
         this.conexao.query(sql, erro => {
-            if(erro) {
+            if (erro) {
                 console.log(erro)
             } else {
                 console.log('Tabela Itens Criada Com Sucesso!')
@@ -17,4 +17,4 @@ class Tabelas {
         })
     }
 }
-    module.exports = new Tabelas
+module.exports = new Tabelas
