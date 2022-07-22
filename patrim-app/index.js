@@ -11,6 +11,6 @@ conexao.connect(erro => {
 
         const app = customExpress()
 
-        app.listen(8080, () => console.log('servidor rodando na porta 6868'))
+        app.listen(8081, () => console.log('servidor rodando na porta 6868'))
     }
 })
